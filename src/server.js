@@ -3,11 +3,11 @@ import pino from 'pino-http';
 import cors from 'cors';
 import env from './utils/env.js';
 
-import { errorHandler } from './middlewares/errorHandler.js';
+import { errorHandler } from './middlewares/errorHandlers.js';
 import { notFoundHandler } from './middlewares/notFoundHandler.js';
-import rootRouter from './routers/index.js';
+import rootRouter from './routes/index.js';
 import cookieParser from 'cookie-parser';
-import { UPLOAD_DIR } from './constants/constants.js';
+import { UPLOAD_DIR } from './constants/index.js';
 
 export default function setupServer() {
   const PORT = Number(env('PORT', 3000));
