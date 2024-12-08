@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-import env  from '../utils/env.js';
+import { env } from '../utils/env.js';
 
 export const initMongoDB = async () => {
   try {
@@ -18,5 +18,3 @@ export const initMongoDB = async () => {
     throw e;
   }
 };
-
-
