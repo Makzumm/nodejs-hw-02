@@ -16,7 +16,15 @@ export const TEMP_UPLOAD_DIR = path.join(process.cwd(), 'temp');
 export const UPLOAD_DIR = path.join(process.cwd(), 'upload');
 
 export const CLOUDINARY = {
-  CLOUD_NAME: process.env.CLOUD_NAME,
-  API_KEY: process.env.API_KEY,
-  API_SECRET: process.env.API_SECRET,
+  CLOUD_NAME: "CLOUD_NAME",
+  API_KEY: "API_KEY",
+  API_SECRET: "API_SECRET"
+};
+
+export const SMTP = {
+  SMTP_HOST: 'SMTP_HOST',
+  SMTP_PORT: 'SMTP_PORT',
+  SMTP_USER: 'SMTP_USER',
+  SMTP_PASSWORD: 'SMTP_PASSWORD',
+  SMTP_FROM: 'SMTP_FROM',
 };
