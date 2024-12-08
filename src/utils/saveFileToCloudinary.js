@@ -5,11 +5,11 @@ import path from 'path';
 
 import { CLOUDINARY } from '../constants/index.js';
 
-cloudinary.v2.config({
+cloudinary.config({
   secure: true,
-  cloud_name: env(CLOUDINARY.CLOUD_NAME),
-  api_key: env(CLOUDINARY.API_KEY),
-  api_secret: env(CLOUDINARY.API_SECRET),
+  cloud_name: CLOUDINARY.CLOUD_NAME,
+  api_key: CLOUDINARY.API_KEY,
+  api_secret: CLOUDINARY.API_SECRET,
 });
 
 export const saveFileToCloudinary = async (file) => {
