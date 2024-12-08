@@ -3,11 +3,13 @@ import env from './env.js';
 import fs from 'node:fs/promises';
 import path from 'path';
 
+import { CLOUDINARY } from '../constants/index.js';
+
 cloudinary.v2.config({
   secure: true,
-  CLOUD_NAME: env('CLOUD_NAME'),
-  API_KEY: env('API_KEY'),
-  API_SECRET: env('API_SECRET'),
+  cloud_name: env(CLOUDINARY.CLOUD_NAME),
+  api_key: env(CLOUDINARY.API_KEY),
+  api_secret: env(CLOUDINARY.API_SECRET),
 });
 
 export const saveFileToCloudinary = async (file) => {
