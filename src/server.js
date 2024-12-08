@@ -2,6 +2,7 @@ import express from 'express';
 import pino from 'pino-http';
 import cors from 'cors';
 import env from './utils/env.js';
+import dotenv from 'dotenv';
 
 import { errorHandler } from './middlewares/errorHandlers.js';
 import { notFoundHandler } from './middlewares/notFoundHandler.js';
@@ -10,6 +11,7 @@ import cookieParser from 'cookie-parser';
 import { UPLOAD_DIR } from './constants/index.js';
 
 export default function setupServer() {
+  dotenv.config();
   const PORT = Number(env('PORT', 3000));
   const app = express();
 
